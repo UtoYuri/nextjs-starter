@@ -6,7 +6,7 @@ import configStore from '../redux/store';
 const store = configStore();
 
 class CustomApp extends App<any, {}> {
-  render () {
+  render() {
     const { Component, pageProps } = this.props;
     return (
       <Container>

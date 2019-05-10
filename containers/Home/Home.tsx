@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux'
+import { bindActionCreators } from 'redux';
 import { Button } from 'antd';
 
 import { testAction, testActionAsync } from '../../redux/actions/test';
@@ -26,20 +26,20 @@ class Home extends React.Component<IHomeProps, {}> {
         <Button onClick={testAction}>+1</Button>
         <Button onClick={testActionAsync}>async +1</Button>
       </div>
-    )
+    );
   }
 }
 
 const mapStateToProps = (state: IState) => {
   const { test: { number } } = state;
   return { number };
-}
+};
 
 const mapDispatchToProps = (dispatch: any) => {
   return {
     testAction: bindActionCreators(testAction, dispatch),
     testActionAsync: bindActionCreators(testActionAsync, dispatch),
-  }
-}
+  };
+};
 
-export default connect(mapStateToProps, mapDispatchToProps)(Home)
+export default connect(mapStateToProps, mapDispatchToProps)(Home);

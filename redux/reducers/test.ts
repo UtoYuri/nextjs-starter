@@ -9,16 +9,18 @@ export interface ITestReducerAction {
   payload?: ITestState;
 }
 
-export default (state: ITestState = {
-  number: 0,
-}, action: ITestReducerAction) => {
-  switch (action.type) {
-    case TestActions.TEST_ACTION:
-      return {
-        ...state,
-        ...{ number: state.number + 1 }
-      };
-    default:
-      return state;
-  }
-}
+export default (
+  state: ITestState = {
+    number: 0,
+  },
+  action: ITestReducerAction) => {
+    switch (action.type) {
+      case TestActions.TEST_ACTION:
+        return {
+          ...state,
+          ...{ number: state.number + 1 },
+        };
+      default:
+        return state;
+    }
+};

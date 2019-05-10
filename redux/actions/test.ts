@@ -1,17 +1,17 @@
 export enum TestActions {
-  TEST_ACTION = "TEST_ACTION",
+  TEST_ACTION = 'TEST_ACTION',
 }
 
 export const testAction = () => (dispatch: any) => {
   return dispatch({
-    type: TestActions.TEST_ACTION
-  })
+    type: TestActions.TEST_ACTION,
+  });
 };
 
-export function testActionAsync() {
+export const testActionAsync = () => {
   return (dispatch: any) => {
     setTimeout(() => {
-      dispatch(testAction())
-    }, 2000)
-  }
-}
+      dispatch(testAction());
+    }, 2000);
+  };
+};

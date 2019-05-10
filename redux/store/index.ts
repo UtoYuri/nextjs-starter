@@ -5,7 +5,7 @@ import rootReducer from '../reducers';
 
 const middlewares = [
   thunkMiddleware,
-  createLogger()
+  createLogger(),
 ];
 
 export default function configStore() {
