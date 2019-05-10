@@ -18,4 +18,4 @@ class CustomApp extends App<any, {}> {
   }
 }
 
-export default withRedux(configStore, {debug: true})(CustomApp);
+export default withRedux(configStore, { debug: false })(CustomApp);
