@@ -1,0 +1,22 @@
+import App, { Container } from 'next/app';
+import { Provider } from 'react-redux';
+import withRedux from 'next-redux-wrapper';
+import configStore from '../store';
+
+const store = configStore();
+
+class CustomApp extends App<any, {}> {
+  render () {
+    const { Component, pageProps } = this.props;
+    return (
+      <Container>
+        <Provider store={store}>
+          APP
+          <Component {...pageProps} />
+        </Provider>
+      </Container>
+    );
+  }
+}
+
+export default withRedux(configStore, {debug: true})(CustomApp);
