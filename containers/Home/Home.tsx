@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux'
+import { Button } from 'antd';
 
 import { testAction, testActionAsync } from '../../redux/actions/test';
 import { IState } from '../../redux/reducers';
@@ -22,8 +23,8 @@ class Home extends React.Component<IHomeProps, {}> {
       <div className={styles.container}>
         Home
         <div>number: {number}</div>
-        <button onClick={testAction}>+1</button>
-        <button onClick={testActionAsync}>async +1</button>
+        <Button onClick={testAction}>+1</Button>
+        <Button onClick={testActionAsync}>async +1</Button>
       </div>
     )
   }

@@ -7,9 +7,10 @@ A tool for creating `NextJS` project with `Typescript`, `Less`, `Redux`
 - Typescript
 - Less
 - Redux
+- Antd
 ### TODO
 - Jest
-- Antd (optional)
+- Lint
 - GraphQL (optional)
 
 ## Usage
