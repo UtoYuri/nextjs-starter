@@ -3,8 +3,8 @@ import test, { ITestState } from './test';
 
 export interface IState {
   test: ITestState;
-};
+}
 
 export default combineReducers({
-  test
-})
+  test,
+});

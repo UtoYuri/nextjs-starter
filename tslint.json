@@ -1,0 +1,14 @@
+{
+    "extends": [ "tslint:latest" ],
+    "rules": {
+      "interface-name": [ true, "always-prefix" ],
+      "no-implicit-dependencies": [ true, "dev" ],
+      "member-access": false,
+      "ordered-imports": [ false ],
+      "object-literal-sort-keys": [ false ],
+      "no-submodule-imports": false,
+      "quotemark": [ true, "single" ],
+      "variable-name": false,
+      "no-shadowed-variable": false
+    }
+  }

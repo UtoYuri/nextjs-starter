@@ -7,7 +7,8 @@
     "dev": "next",
     "build": "next build",
     "start": "next start",
-    "export": "next build && next export"
+    "export": "next build && next export",
+    "lint": "tslint \"{components,containers,pages,redux}/**/*.{ts,tsx}\""
   },
   "devDependencies": {
     "@types/next": "^8.0.5",
@@ -20,7 +21,9 @@
     "babel-plugin-import": "^1.11.0",
     "next": "^8.1.0",
     "react": "^16.8.6",
-    "react-dom": "^16.8.6"
+    "react-dom": "^16.8.6",
+    "tslint": "^5.16.0",
+    "typescript": "^3.4.5"
   },
   "dependencies": {
     "@zeit/next-less": "^1.0.1",

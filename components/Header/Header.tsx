@@ -1,5 +1,5 @@
 import * as React from 'react';
-import Head from 'next/head'
+import Head from 'next/head';
 
 import styles from './Header.less';
 
@@ -15,7 +15,7 @@ class CommonHeader extends React.Component<{}, {}> {
         </Head>
         Header
       </div>
-    )
+    );
   }
 }
 

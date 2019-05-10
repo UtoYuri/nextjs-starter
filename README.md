@@ -8,9 +8,9 @@ A tool for creating `NextJS` project with `Typescript`, `Less`, `Redux`
 - Less
 - Redux
 - Antd
+- TSLint
 ### TODO
 - Jest
-- Lint
 - GraphQL (optional)
 
 ## Usage
@@ -25,4 +25,8 @@ yarn build && yarn start
 ### Static Export
 ```
 yarn export
+```
+### Lint
+```
+yarn lint
 ```

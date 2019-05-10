@@ -8,7 +8,7 @@ class Footer extends React.Component<{}, {}> {
       <div className={styles.container}>
         Footer
       </div>
-    )
+    );
   }
 }
 
