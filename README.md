@@ -1,5 +1,6 @@
 # nextjs-starter
-A tool for creating `NextJS` project with `Typescript`, `Less`, `Redux`
+[![Build Status](https://travis-ci.org/UtoYuri/nextjs-starter.svg?branch=master)](https://travis-ci.org/UtoYuri/nextjs-starter)
+A tool for creating `NextJS` project.
 
 
 ## Builtin
