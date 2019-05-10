@@ -838,6 +838,13 @@
   dependencies:
     redux "^3.6.0"
 
+"@types/styled-jsx@^2.2.8":
+  version "2.2.8"
+  resolved "https://registry.npm.taobao.org/@types/styled-jsx/download/@types/styled-jsx-2.2.8.tgz#b50d13d8a3c34036282d65194554cf186bab7234"
+  integrity sha1-tQ0T2KPDQDYoLWUZRVTPGGurcjQ=
+  dependencies:
+    "@types/react" "*"
+
 "@types/tapable@*":
   version "1.0.4"
   resolved "https://registry.npm.taobao.org/@types/tapable/download/@types/tapable-1.0.4.tgz#b4ffc7dc97b498c969b360a41eee247f82616370"

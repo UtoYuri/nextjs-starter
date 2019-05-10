@@ -1,9 +1,9 @@
 import * as React from "react";
-import Header from '../components/Header/Header';
+import Layout from '../components/Layout/Layout';
+import Home from '../containers/Home/Home';
 
 export default () => (
-  <div>
-    Welcome to index.ts!
-    <Header title="xxx" />
-  </div>
+  <Layout>
+    <Home />
+  </Layout>
 )

@@ -1,10 +1,10 @@
 import { combineReducers } from 'redux';
-import account, { IAccountState } from './account';
+import test, { ITestState } from './test';
 
 export interface IState {
-  account: IAccountState;
+  test: ITestState;
 };
 
 export default combineReducers({
-  account
+  test
 })

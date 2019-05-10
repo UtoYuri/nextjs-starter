@@ -1,10 +1,10 @@
-export enum AccountActions {
+export enum TestActions {
   TEST_ACTION = "TEST_ACTION",
 }
 
 export const testAction = () => (dispatch: any) => {
   return dispatch({
-    type: AccountActions.TEST_ACTION
+    type: TestActions.TEST_ACTION
   })
 };
 
