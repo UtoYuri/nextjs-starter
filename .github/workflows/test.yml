@@ -30,3 +30,17 @@ jobs:
 
     - name: Build docker image
       run: docker build . --tag nextjs-starter:$(date +%s)
+
+  notify:
+    needs: build
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v1
+
+    - name: Discord notification
+      env:
+        DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
+      uses: Ilshidur/action-discord@master
+      with:
+        args: 'The testing of <${{ github.repository }}:${{ github.ref }}> passed.'
