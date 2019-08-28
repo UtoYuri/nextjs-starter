@@ -4,7 +4,7 @@ const lessConfig = {
   cssModules: true,
   cssLoaderOptions: {
     importLoaders: 1,
-    localIdentName: "[local]___[hash:base64:5]",
+    localIdentName: process.env.NODE_ENV === 'production' ? "[hash:base64:5]" : "[local]___[hash:base64:5]",
   }
 };
 
