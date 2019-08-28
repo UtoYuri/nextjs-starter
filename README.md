@@ -1,6 +1,4 @@
 # nextjs-starter
-[![Build Status](https://travis-ci.org/UtoYuri/nextjs-starter.svg?branch=master)](https://travis-ci.org/UtoYuri/nextjs-starter)
-
 A tool for creating `NextJS` project.
 
 
@@ -12,9 +10,6 @@ A tool for creating `NextJS` project.
 - Antd
 - TSLint
 - StoryBook [branch/storybook](https://github.com/UtoYuri/nextjs-starter/tree/feature/storybook)
-### TODO
-- Jest
-- GraphQL (optional)
 
 ## Usage
 ### Dev Mode
