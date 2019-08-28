@@ -1,9 +1,6 @@
-name: CI for Master Branch
+name: CI for Release
 
-on:
-  push:
-    branches:
-    - master
+on: [release]
 
 jobs:
   lint:
@@ -23,8 +20,9 @@ jobs:
         yarn lint
       env:
         CI: true
-        
+
   build:
+    needs: lint
     runs-on: ubuntu-latest
     
     steps:
