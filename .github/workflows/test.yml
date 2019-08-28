@@ -1,0 +1,32 @@
+name: CI for Test
+
+on: [push]
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v1
+      with:
+        node-version: 11.x
+
+    - name: Setup Node.js 11.x
+      uses: actions/setup-node@v1
+
+    - name: Run yarn install and lint
+      run: |
+        yarn install
+        yarn lint
+      env:
+        CI: true
+
+  build:
+    needs: lint
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v1
+
+    - name: Build docker image
+      run: docker build . --tag nextjs-starter:$(date +%s)
