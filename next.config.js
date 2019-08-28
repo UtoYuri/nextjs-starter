@@ -1,5 +1,6 @@
 const withTypescript = require('@zeit/next-typescript')
 const withLess = require('@zeit/next-less')
+const withImages = require('next-images');
 const lessConfig = {
   cssModules: true,
   cssLoaderOptions: {
@@ -8,4 +9,4 @@ const lessConfig = {
   }
 };
 
-module.exports = withTypescript(withLess(lessConfig))
+module.exports = withImages(withTypescript(withLess(lessConfig)));
