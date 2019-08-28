@@ -5,23 +5,23 @@ import { Button } from 'antd';
 
 import { testAction, testActionAsync } from '../../redux/actions/test';
 import { IState } from '../../redux/reducers';
-import styles from './Home.less';
+import styles from './ReduxDemo.less';
 
-interface IHomeProps {
+interface IReduxDemoProps {
   number?: number;
 
   testAction?: any;
   testActionAsync?: any;
 }
 
-class Home extends React.Component<IHomeProps, {}> {
+class ReduxDemo extends React.Component<IReduxDemoProps, {}> {
   render() {
     const { number } = this.props;
     const { testAction, testActionAsync } = this.props;
 
     return (
       <div className={styles.container}>
-        Home
+        ReduxDemo
         <div>number: {number}</div>
         <Button onClick={testAction}>+1</Button>
         <Button onClick={testActionAsync}>async +1</Button>
@@ -31,7 +31,9 @@ class Home extends React.Component<IHomeProps, {}> {
 }
 
 const mapStateToProps = (state: IState) => {
-  const { test: { number } } = state;
+  const {
+    test: { number },
+  } = state;
   return { number };
 };
 
@@ -42,4 +44,7 @@ const mapDispatchToProps = (dispatch: any) => {
   };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Home);
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps,
+)(ReduxDemo);

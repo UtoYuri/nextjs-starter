@@ -21,7 +21,7 @@ class Layout extends React.Component<ILayoutProps, {}> {
           }
         `}</style>
         <Header />
-        { children }
+        {children}
         <Footer />
       </div>
     );

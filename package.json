@@ -8,7 +8,10 @@
     "build": "next build",
     "start": "next start",
     "export": "next build && next export",
-    "lint": "tslint \"{components,containers,pages,redux}/**/*.{ts,tsx}\""
+    "prettier:base": "prettier --parser typescript",
+    "prettier:check": "yarn prettier:base --list-different \"{components,containers,pages,redux,routes}/**/*.{ts,tsx}\"",
+    "format": "yarn prettier:base --write \"{components,containers,pages,redux,routes}/**/*.{ts,tsx}\"",
+    "lint": "tslint \"{components,containers,pages,redux,routes}/**/*.{ts,tsx}\""
   },
   "devDependencies": {
     "@types/next": "^8.0.5",
@@ -20,6 +23,7 @@
     "@types/styled-jsx": "^2.2.8",
     "babel-plugin-import": "^1.11.0",
     "next": "^8.1.0",
+    "prettier": "^1.18.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "tslint": "^5.16.0",
