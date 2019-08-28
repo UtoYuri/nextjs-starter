@@ -29,4 +29,18 @@ jobs:
     - uses: actions/checkout@v1
 
     - name: Build docker image
-      run: docker build . --tag nextjs-starter:$(date +%s)
+      run: docker build . --tag nextjs-starter:${{ github.sha }}
+
+  notify:
+    needs: build
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v1
+
+    - name: Discord notification
+      env:
+        DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
+      uses: Ilshidur/action-discord@master
+      with:
+        args: 'The project <${{ github.repository }}> has been released.'
