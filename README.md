@@ -9,7 +9,7 @@ A tool for creating `NextJS` project.
 - Redux
 - Antd
 - TSLint
-- StoryBook [branch/storybook](https://github.com/UtoYuri/nextjs-starter/tree/feature/storybook)
+- Prettier
 
 ## Usage
 ### Dev Mode
@@ -27,4 +27,8 @@ yarn export
 ### Lint
 ```
 yarn lint
+```
+### Format Code
+```
+yarn format
 ```

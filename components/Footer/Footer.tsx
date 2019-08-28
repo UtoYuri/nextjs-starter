@@ -4,11 +4,7 @@ import styles from './Footer.less';
 
 class Footer extends React.Component<{}, {}> {
   render() {
-    return (
-      <div className={styles.container}>
-        Footer
-      </div>
-    );
+    return <div className={styles.container}>Footer</div>;
   }
 }
 
